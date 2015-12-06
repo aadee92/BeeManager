@@ -21,13 +21,10 @@
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="ata.txt" />
-    <Content Include="data.txt" />
     <Content Include="HiveManagement\templates\hive_management\analysis.html" />
     <Content Include="HiveManagement\templates\hive_management\field.html" />
     <Content Include="HiveManagement\templates\hive_management\overview.html" />
     <Content Include="HiveManagement\templates\hive_management\pallet.html" />
-    <Content Include="New Text Document.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BeeManager\settings.py" />
