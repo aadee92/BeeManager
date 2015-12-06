@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0e5abaeb-8427-4c52-a460-3e67ac7d2c1b}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+    <UseIISExpress>true</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="ata.txt" />
+    <Content Include="data.txt" />
+    <Content Include="HiveManagement\templates\hive_management\analysis.html" />
+    <Content Include="HiveManagement\templates\hive_management\field.html" />
+    <Content Include="HiveManagement\templates\hive_management\overview.html" />
+    <Content Include="HiveManagement\templates\hive_management\pallet.html" />
+    <Content Include="New Text Document.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BeeManager\settings.py" />
+    <Compile Include="BeeManager\urls.py" />
+    <Compile Include="BeeManager\wsgi.py" />
+    <Compile Include="BeeManager\__init__.py" />
+    <Compile Include="HiveManagement\admin.py" />
+    <Compile Include="HiveManagement\migrations\0001_initial.py" />
+    <Compile Include="HiveManagement\migrations\0002_auto_20151103_0209.py" />
+    <Compile Include="HiveManagement\migrations\0003_auto_20151103_1802.py" />
+    <Compile Include="HiveManagement\migrations\0004_auto_20151103_1918.py" />
+    <Compile Include="HiveManagement\migrations\0005_auto_20151104_0619.py" />
+    <Compile Include="HiveManagement\migrations\0006_tagcheckin_is_dead.py" />
+    <Compile Include="HiveManagement\migrations\0007_auto_20151104_2154.py" />
+    <Compile Include="HiveManagement\migrations\0008_auto_20151104_2229.py" />
+    <Compile Include="HiveManagement\migrations\0009_auto_20151105_0719.py" />
+    <Compile Include="HiveManagement\migrations\0010_auto_20151105_0725.py" />
+    <Compile Include="HiveManagement\migrations\0011_field_weather_conditions.py" />
+    <Compile Include="HiveManagement\migrations\0012_auto_20151119_1757.py" />
+    <Compile Include="HiveManagement\migrations\__init__.py" />
+    <Compile Include="HiveManagement\models.py" />
+    <Compile Include="HiveManagement\serializers.py" />
+    <Compile Include="HiveManagement\tables.py" />
+    <Compile Include="HiveManagement\tests.py" />
+    <Compile Include="HiveManagement\urls.py" />
+    <Compile Include="HiveManagement\views.py" />
+    <Compile Include="HiveManagement\__init__.py" />
+    <Compile Include="manage.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BeeManager" />
+    <Folder Include="HiveManagement" />
+    <Folder Include="HiveManagement\migrations" />
+    <Folder Include="HiveManagement\templates\" />
+    <Folder Include="HiveManagement\templates\hive_management" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57512/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>True</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
