@@ -212,4 +212,5 @@ _Pvt_Extensions/
 ModelManifest.xml
 
 # Vagrant
-*.vagrant
+*.vagrant/
+*.vagrant/*
