@@ -214,3 +214,6 @@ ModelManifest.xml
 # Vagrant
 *.vagrant/
 *.vagrant/*
+
+*.venv
+
