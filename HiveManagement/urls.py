@@ -14,6 +14,7 @@ urlpatterns = [
     # ex: /polls/5/vote/
     #url(r'^(?P<question_id>[0-9]+)/vote/$', views.vote, name='vote'),
     #Some new comment
+    #Another Comment in "newfeature" branch
 
     #ex: /HiveManagement/
     url(r'^$', views.index, name='index'),
