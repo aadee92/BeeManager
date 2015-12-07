@@ -12,16 +12,20 @@ sudo apt-get update
 #Install Python3 with Pip
 sudo apt-get -y install python3-pip
 
+# Install GIT
+sudo apt-get -y install git
+
+
 #Setup a virtual environment
 # - Make Folder
-cd /vagrant/
-mkdir /vagrant/venv
+cd /
+mkdir /venv
 # - Install Virtual Environment
 sudo -H pip3 install virtualenv
 # - Configure Virtual Environment to use Python3
-sudo -H virtualenv /vagrant/venv -p python3
+sudo -H virtualenv /venv -p python3
 # Begin using the virtual environment 
-source /vagrant/venv/bin/activate
+source /venv/bin/activate
 
 
 #Install django
@@ -39,37 +43,27 @@ pip3 install djangorestframework
 #Install PostgreSQL
 sudo apt-get install -y postgresql postgresql-contrib postgresql-9.3-postgis-scripts
 
-
-
-sudo -u postgres psql
-
-
-ALTER USER postgres PASSWORD 'password';															# Need to re-run this
-\q
-
+echo '===== Creating PostgreSQL databases and users'
+sudo -u postgres << EOF
+psql "
+ALTER USER postgres PASSWORD 'password';
+"															
+EOF
 sudo -u postgres createdb BeeManagement
-
 
 #Install its GEO-Library 
 sudo apt-get install -y PostGIS
 
 #Configure this Django superuser
-cd /vagrant/
-
-# Install GIT
-sudo apt-get -y install git
-
-#Pull the latest project
-git clone https://github.com/aadee92/HiveManagement.git
-
-# cd ./HiveManagement
-
-python manage.py migrate
-
 #python manage.py createsuperuser																	# Need to re-run this
  #admin
  #password
 
-#python manage.py runserver 0.0.0.0:8000 --noreload
+cd /vagrant/
+echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'password')" | python manage.py shell
+
+python manage.py migrate
+
+python manage.py runserver 0.0.0.0:8000 --noreload;
 
 
