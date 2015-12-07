@@ -18,14 +18,13 @@ from django.contrib import admin
 from rest_framework import routers
 from HiveManagement import views
 
-#How about this?
+#A comment in new branch name
+
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 #router.register(r'worklog', views.GroupViewSet)
-#Anothe rnew feature
 
-#One last edit
 
 urlpatterns = [
     url(r'^', include(router.urls)),
