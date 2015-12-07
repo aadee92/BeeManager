@@ -25,23 +25,26 @@ source /vagrant/venv/bin/activate
 
 
 #Install django
-pip install django
+pip3 install django
 
 #Psycopg2 is a tool that lets Python talk to PostgreSQL
 # - First, install its dependencies
 sudo apt-get -y install libpq-dev python-dev
 # - Install Psycopg2
-pip install psycopg2
+pip3 install psycopg2
 
 #Install REST API
-pip install djangorestframework
+pip3 install djangorestframework
 
 #Install PostgreSQL
 sudo apt-get install -y postgresql postgresql-contrib postgresql-9.3-postgis-scripts
 
+
+
 sudo -u postgres psql
 
-ALTER USER postgres PASSWORD 'password';
+
+ALTER USER postgres PASSWORD 'password';															# Need to re-run this
 \q
 
 sudo -u postgres createdb BeeManagement
@@ -59,11 +62,11 @@ sudo apt-get -y install git
 #Pull the latest project
 git clone https://github.com/aadee92/HiveManagement.git
 
-cd ./HiveManagement
+# cd ./HiveManagement
 
 python manage.py migrate
 
-#python manage.py createsuperuser
+#python manage.py createsuperuser																	# Need to re-run this
  #admin
  #password
 

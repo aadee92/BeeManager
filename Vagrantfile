@@ -12,8 +12,8 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "hashicorp/precise32"
-  config.vm.provision :shell, path=> "vagrant/Provisioning.sh"
+  config.vm.box = "ubuntu/trusty32"
+  config.vm.provision :shell, path: "Provisioning.sh"
   
   # Forward ports to Apache and MySQL
   config.vm.network "forwarded_port", guest: 80, host: 8888
